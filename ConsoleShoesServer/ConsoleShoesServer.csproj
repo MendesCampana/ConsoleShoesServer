@@ -55,7 +55,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IShopContract.cs" />
+    <Compile Include="Contracts\IFactoryContract.cs" />
+    <Compile Include="Contracts\IShoesContract.cs" />
     <Compile Include="ShoesDBfolder\AgeStatu.cs" />
     <Compile Include="ShoesDBfolder\Factory.cs" />
     <Compile Include="ShoesDBfolder\Gender.cs" />
@@ -67,7 +68,12 @@
     <Compile Include="ShoesDBfolder\sysdiagram.cs" />
     <Compile Include="ShoesDBfolder\User.cs" />
     <Compile Include="ShoesShopContract.cs" />
-    <Compile Include="ShopService\FactoryService.cs" />
+    <Compile Include="ShopDataService\AgeStatusDataService.cs" />
+    <Compile Include="ShopDataService\FactoryDataService.cs" />
+    <Compile Include="ShopDataService\GenderDataService.cs" />
+    <Compile Include="ShopDataService\ShoesDataService.cs" />
+    <Compile Include="ShopDataService\SizeDataService.cs" />
+    <Compile Include="ShopDataService\UserDataService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

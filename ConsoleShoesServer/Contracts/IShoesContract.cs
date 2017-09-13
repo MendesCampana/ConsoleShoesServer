@@ -1,4 +1,4 @@
-﻿using ConsoleShoesServer.ShopService;
+﻿using ConsoleShoesServer.ShopDataService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +6,14 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleShoesServer
+namespace ConsoleShoesServer.Contracts
 {
-
     [ServiceContract]
-    public interface IShopContract
+    public interface IShoesContract
     {
         [OperationContract]
-        IEnumerable<FactoryService> getFactories();
+        List<ShoesDataService> getAllShoes();
         [OperationContract]
-        void addFactory(FactoryService tFactory);
+        void addShoe(ShoesDataService tShoe);
     }
 }

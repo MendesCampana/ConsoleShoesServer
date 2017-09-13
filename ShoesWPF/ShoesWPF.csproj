@@ -62,6 +62,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ShopService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -111,6 +116,22 @@
     <None Include="Service References\Factories\ShoesWPF.Factories.FactoryService.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ShopService\ConsoleShoesServer.ShopDataService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\service.wsdl" />
+    <None Include="Service References\ShopService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ShopService\ShoesWPF.ShopService.FactoryDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShopService\ShoesWPF.ShopService.ShoesDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -120,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Factories\" />
+    <WCFMetadataStorage Include="Service References\ShopService\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Factories\configuration91.svcinfo" />
@@ -129,6 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Factories\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShopService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShopService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ShopService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

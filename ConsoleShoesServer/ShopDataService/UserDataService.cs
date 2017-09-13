@@ -5,12 +5,14 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleShoesServer.ShopService
+namespace ConsoleShoesServer.ShopDataService
 {
     [DataContract]
-    public class FactoryService
+    public class UserDataService
     {
         [DataMember]
-        public string Name { get; set; }
+        public string Name { set; get; }
+        [DataMember]
+        public string PassWord { set; get; }
     }
 }

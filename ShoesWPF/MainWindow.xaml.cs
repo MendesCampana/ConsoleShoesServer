@@ -1,4 +1,5 @@
 ﻿using ShoesWPF.Factories;
+using ShoesWPF.ShopService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace ShoesWPF
 {
@@ -21,17 +19,17 @@ namespace ShoesWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        ShopContractClient client = new ShopContractClient();
+        ShoesContractClient client = new ShoesContractClient();
         public MainWindow()
         {
             InitializeComponent();
-            Factories.ItemsSource = client.getFactories();
+            Factories.ItemsSource = client.getAllShoes();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            client.addFactory(new FactoryService() { Name = NewFacName.Text });
-            Factories.ItemsSource = client.getFactories();
+            //client.addFactory(new FactoryService() { Name = NewFacName.Text });
+            //Factories.ItemsSource = client.getFactories();
         }
     }
 }

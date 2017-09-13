@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFactoryDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FactoryDataService" nillable="true" type="tns:FactoryDataService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFactoryDataService" nillable="true" type="tns:ArrayOfFactoryDataService" />
+  <xs:complexType name="FactoryDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FactoryDataService" nillable="true" type="tns:FactoryDataService" />
+  <xs:complexType name="ArrayOfShoesDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShoesDataService" nillable="true" type="tns:ShoesDataService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShoesDataService" nillable="true" type="tns:ArrayOfShoesDataService" />
+  <xs:complexType name="ShoesDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeData" nillable="true" type="tns:AgeStatusDataService" />
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="GenderData" nillable="true" type="tns:GenderDataService" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IncomePrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="tns:FactoryDataService" />
+      <xs:element minOccurs="0" name="ModelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModelSize" nillable="true" type="tns:SizeDataService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShoesDataService" nillable="true" type="tns:ShoesDataService" />
+  <xs:complexType name="AgeStatusDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgeStatusDataService" nillable="true" type="tns:AgeStatusDataService" />
+  <xs:complexType name="GenderDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenderDataService" nillable="true" type="tns:GenderDataService" />
+  <xs:complexType name="SizeDataService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Measure" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SizeDataService" nillable="true" type="tns:SizeDataService" />
+</xs:schema>
