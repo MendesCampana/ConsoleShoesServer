@@ -8,7 +8,8 @@ namespace ConsoleShoesServer
     public partial class ShoesDB : DbContext
     {
         public ShoesDB()
-            : base("name=ShoesDB")
+             //: base("name=ShoesDB")
+             : base("name=ShopDBHome")
         {
         }
 
