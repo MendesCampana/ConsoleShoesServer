@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleShoesServer
 {
-    public class ShoesShopContract:IFactoryContract, IShoesContract
+    public class ShoesShopContract:IFactoryContract, IShoesContract, IShoesLoginContract
     {
         ShoesDB context = new ShoesDB();
 
@@ -62,6 +62,14 @@ namespace ConsoleShoesServer
             return tList;
         }
 
-       
+        public bool CheckLogin(string LogIn, string PassWord)
+        {
+            foreach (User key in context.Users)
+            {
+                if ((key.Login == LogIn) && (key.Password == PassWord))
+                    return true;
+            }
+            return false;
+        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using ShoesWPF.Factories;
-using ShoesWPF.ShopService;
+﻿using ShoesWPF.ServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,17 +18,23 @@ namespace ShoesWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        ShoesContractClient client = new ShoesContractClient();
+        ShoesLoginContractClient client = new ShoesLoginContractClient();
         public MainWindow()
         {
             InitializeComponent();
-            Factories.ItemsSource = client.getAllShoes();
+            //Factories.ItemsSource = client.getAllShoes();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //client.addFactory(new FactoryService() { Name = NewFacName.Text });
-            //Factories.ItemsSource = client.getFactories();
+            if (client.CheckLogin(loginText.Text, passText.Password))
+            {
+                MessageBox.Show("succeded");
+            }
+            else
+            {
+                MessageBox.Show("Denied");
+            }
         }
     }
 }

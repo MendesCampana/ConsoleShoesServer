@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShoesWPF.ShopService {
+namespace ShoesWPF.ServiceReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -68,13 +68,13 @@ namespace ShoesWPF.ShopService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ShoesWPF.ShopService.AgeStatusDataService AgeDataField;
+        private ShoesWPF.ServiceReference.AgeStatusDataService AgeDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int AmountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ShoesWPF.ShopService.GenderDataService GenderDataField;
+        private ShoesWPF.ServiceReference.GenderDataService GenderDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ImagePathField;
@@ -83,13 +83,13 @@ namespace ShoesWPF.ShopService {
         private decimal IncomePriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ShoesWPF.ShopService.FactoryDataService ManufacturerField;
+        private ShoesWPF.ServiceReference.FactoryDataService ManufacturerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ModelNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private ShoesWPF.ShopService.SizeDataService ModelSizeField;
+        private ShoesWPF.ServiceReference.SizeDataService ModelSizeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -102,7 +102,7 @@ namespace ShoesWPF.ShopService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ShoesWPF.ShopService.AgeStatusDataService AgeData {
+        public ShoesWPF.ServiceReference.AgeStatusDataService AgeData {
             get {
                 return this.AgeDataField;
             }
@@ -128,7 +128,7 @@ namespace ShoesWPF.ShopService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ShoesWPF.ShopService.GenderDataService GenderData {
+        public ShoesWPF.ServiceReference.GenderDataService GenderData {
             get {
                 return this.GenderDataField;
             }
@@ -167,7 +167,7 @@ namespace ShoesWPF.ShopService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ShoesWPF.ShopService.FactoryDataService Manufacturer {
+        public ShoesWPF.ServiceReference.FactoryDataService Manufacturer {
             get {
                 return this.ManufacturerField;
             }
@@ -193,7 +193,7 @@ namespace ShoesWPF.ShopService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ShoesWPF.ShopService.SizeDataService ModelSize {
+        public ShoesWPF.ServiceReference.SizeDataService ModelSize {
             get {
                 return this.ModelSizeField;
             }
@@ -351,29 +351,29 @@ namespace ShoesWPF.ShopService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ShopService.IFactoryContract")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IFactoryContract")]
     public interface IFactoryContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFactoryContract/getFactories", ReplyAction="http://tempuri.org/IFactoryContract/getFactoriesResponse")]
-        ShoesWPF.ShopService.FactoryDataService[] getFactories();
+        ShoesWPF.ServiceReference.FactoryDataService[] getFactories();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFactoryContract/getFactories", ReplyAction="http://tempuri.org/IFactoryContract/getFactoriesResponse")]
-        System.Threading.Tasks.Task<ShoesWPF.ShopService.FactoryDataService[]> getFactoriesAsync();
+        System.Threading.Tasks.Task<ShoesWPF.ServiceReference.FactoryDataService[]> getFactoriesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFactoryContract/addFactory", ReplyAction="http://tempuri.org/IFactoryContract/addFactoryResponse")]
-        void addFactory(ShoesWPF.ShopService.FactoryDataService tFactory);
+        void addFactory(ShoesWPF.ServiceReference.FactoryDataService tFactory);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFactoryContract/addFactory", ReplyAction="http://tempuri.org/IFactoryContract/addFactoryResponse")]
-        System.Threading.Tasks.Task addFactoryAsync(ShoesWPF.ShopService.FactoryDataService tFactory);
+        System.Threading.Tasks.Task addFactoryAsync(ShoesWPF.ServiceReference.FactoryDataService tFactory);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IFactoryContractChannel : ShoesWPF.ShopService.IFactoryContract, System.ServiceModel.IClientChannel {
+    public interface IFactoryContractChannel : ShoesWPF.ServiceReference.IFactoryContract, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class FactoryContractClient : System.ServiceModel.ClientBase<ShoesWPF.ShopService.IFactoryContract>, ShoesWPF.ShopService.IFactoryContract {
+    public partial class FactoryContractClient : System.ServiceModel.ClientBase<ShoesWPF.ServiceReference.IFactoryContract>, ShoesWPF.ServiceReference.IFactoryContract {
         
         public FactoryContractClient() {
         }
@@ -394,47 +394,47 @@ namespace ShoesWPF.ShopService {
                 base(binding, remoteAddress) {
         }
         
-        public ShoesWPF.ShopService.FactoryDataService[] getFactories() {
+        public ShoesWPF.ServiceReference.FactoryDataService[] getFactories() {
             return base.Channel.getFactories();
         }
         
-        public System.Threading.Tasks.Task<ShoesWPF.ShopService.FactoryDataService[]> getFactoriesAsync() {
+        public System.Threading.Tasks.Task<ShoesWPF.ServiceReference.FactoryDataService[]> getFactoriesAsync() {
             return base.Channel.getFactoriesAsync();
         }
         
-        public void addFactory(ShoesWPF.ShopService.FactoryDataService tFactory) {
+        public void addFactory(ShoesWPF.ServiceReference.FactoryDataService tFactory) {
             base.Channel.addFactory(tFactory);
         }
         
-        public System.Threading.Tasks.Task addFactoryAsync(ShoesWPF.ShopService.FactoryDataService tFactory) {
+        public System.Threading.Tasks.Task addFactoryAsync(ShoesWPF.ServiceReference.FactoryDataService tFactory) {
             return base.Channel.addFactoryAsync(tFactory);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ShopService.IShoesContract")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IShoesContract")]
     public interface IShoesContract {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShoesContract/getAllShoes", ReplyAction="http://tempuri.org/IShoesContract/getAllShoesResponse")]
-        ShoesWPF.ShopService.ShoesDataService[] getAllShoes();
+        ShoesWPF.ServiceReference.ShoesDataService[] getAllShoes();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShoesContract/getAllShoes", ReplyAction="http://tempuri.org/IShoesContract/getAllShoesResponse")]
-        System.Threading.Tasks.Task<ShoesWPF.ShopService.ShoesDataService[]> getAllShoesAsync();
+        System.Threading.Tasks.Task<ShoesWPF.ServiceReference.ShoesDataService[]> getAllShoesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShoesContract/addShoe", ReplyAction="http://tempuri.org/IShoesContract/addShoeResponse")]
-        void addShoe(ShoesWPF.ShopService.ShoesDataService tShoe);
+        void addShoe(ShoesWPF.ServiceReference.ShoesDataService tShoe);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShoesContract/addShoe", ReplyAction="http://tempuri.org/IShoesContract/addShoeResponse")]
-        System.Threading.Tasks.Task addShoeAsync(ShoesWPF.ShopService.ShoesDataService tShoe);
+        System.Threading.Tasks.Task addShoeAsync(ShoesWPF.ServiceReference.ShoesDataService tShoe);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IShoesContractChannel : ShoesWPF.ShopService.IShoesContract, System.ServiceModel.IClientChannel {
+    public interface IShoesContractChannel : ShoesWPF.ServiceReference.IShoesContract, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ShoesContractClient : System.ServiceModel.ClientBase<ShoesWPF.ShopService.IShoesContract>, ShoesWPF.ShopService.IShoesContract {
+    public partial class ShoesContractClient : System.ServiceModel.ClientBase<ShoesWPF.ServiceReference.IShoesContract>, ShoesWPF.ServiceReference.IShoesContract {
         
         public ShoesContractClient() {
         }
@@ -455,20 +455,67 @@ namespace ShoesWPF.ShopService {
                 base(binding, remoteAddress) {
         }
         
-        public ShoesWPF.ShopService.ShoesDataService[] getAllShoes() {
+        public ShoesWPF.ServiceReference.ShoesDataService[] getAllShoes() {
             return base.Channel.getAllShoes();
         }
         
-        public System.Threading.Tasks.Task<ShoesWPF.ShopService.ShoesDataService[]> getAllShoesAsync() {
+        public System.Threading.Tasks.Task<ShoesWPF.ServiceReference.ShoesDataService[]> getAllShoesAsync() {
             return base.Channel.getAllShoesAsync();
         }
         
-        public void addShoe(ShoesWPF.ShopService.ShoesDataService tShoe) {
+        public void addShoe(ShoesWPF.ServiceReference.ShoesDataService tShoe) {
             base.Channel.addShoe(tShoe);
         }
         
-        public System.Threading.Tasks.Task addShoeAsync(ShoesWPF.ShopService.ShoesDataService tShoe) {
+        public System.Threading.Tasks.Task addShoeAsync(ShoesWPF.ServiceReference.ShoesDataService tShoe) {
             return base.Channel.addShoeAsync(tShoe);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IShoesLoginContract")]
+    public interface IShoesLoginContract {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShoesLoginContract/CheckLogin", ReplyAction="http://tempuri.org/IShoesLoginContract/CheckLoginResponse")]
+        bool CheckLogin(string LogIn, string PassWord);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IShoesLoginContract/CheckLogin", ReplyAction="http://tempuri.org/IShoesLoginContract/CheckLoginResponse")]
+        System.Threading.Tasks.Task<bool> CheckLoginAsync(string LogIn, string PassWord);
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IShoesLoginContractChannel : ShoesWPF.ServiceReference.IShoesLoginContract, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class ShoesLoginContractClient : System.ServiceModel.ClientBase<ShoesWPF.ServiceReference.IShoesLoginContract>, ShoesWPF.ServiceReference.IShoesLoginContract {
+        
+        public ShoesLoginContractClient() {
+        }
+        
+        public ShoesLoginContractClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ShoesLoginContractClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ShoesLoginContractClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ShoesLoginContractClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        public bool CheckLogin(string LogIn, string PassWord) {
+            return base.Channel.CheckLogin(LogIn, PassWord);
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckLoginAsync(string LogIn, string PassWord) {
+            return base.Channel.CheckLoginAsync(LogIn, PassWord);
         }
     }
 }

@@ -5,21 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShoesWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid Background="Aqua">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <ComboBox Name="Factories" Margin="20 30" Height="30" VerticalAlignment="Top">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock FontSize="18" Text="{Binding ModelName}"></TextBlock>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <TextBox Name="NewFacName" FontSize="18" Grid.Column="1" Margin="30" Height="30" VerticalAlignment="Top"></TextBox>
-        <Button Grid.Column="1" Margin="30 100" Height="30" Width="70" VerticalAlignment="Top" Click="Button_Click"></Button>
-        
+        Title="Log In" Height="400" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#0ABAB5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Name="loginText" Grid.Row="0" Margin="100 30" FontSize="25" FontStyle="Italic" FontWeight="ExtraBold" VerticalContentAlignment="Center"></TextBox>
+        <PasswordBox Name="passText" Grid.Row="1" Margin="100 30" FontSize="25" FontWeight="ExtraBold" VerticalContentAlignment="Center"></PasswordBox>
+        <Button Grid.Row="2" Margin="60 30" Width="150" HorizontalAlignment="Center" Click="Button_Click">
+            <TextBlock Text="Log In" FontSize="18" FontWeight="ExtraBold"></TextBlock>
+        </Button>
     </Grid>
 </Window>

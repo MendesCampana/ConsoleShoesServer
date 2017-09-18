@@ -57,12 +57,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Service References\Factories\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\ShopService\Reference.cs">
+    <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -103,33 +98,20 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Service References\Factories\ConsoleShoesServer.ShopService.xsd">
+    <None Include="Service References\ServiceReference\ConsoleShoesServer.ShopDataService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Factories\service.wsdl" />
-    <None Include="Service References\Factories\service.xsd">
+    <None Include="Service References\ServiceReference\service.wsdl" />
+    <None Include="Service References\ServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Factories\service1.xsd">
+    <None Include="Service References\ServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Factories\ShoesWPF.Factories.FactoryService.datasource">
+    <None Include="Service References\ServiceReference\ShoesWPF.ServiceReference.FactoryDataService.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ShopService\ConsoleShoesServer.ShopDataService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ShopService\service.wsdl" />
-    <None Include="Service References\ShopService\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ShopService\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ShopService\ShoesWPF.ShopService.FactoryDataService.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ShopService\ShoesWPF.ShopService.ShoesDataService.datasource">
+    <None Include="Service References\ServiceReference\ShoesWPF.ServiceReference.ShoesDataService.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
@@ -140,29 +122,16 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\Factories\" />
-    <WCFMetadataStorage Include="Service References\ShopService\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Factories\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Factories\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Factories\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ShopService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ShopService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ShopService\Reference.svcmap">
+    <None Include="Service References\ServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

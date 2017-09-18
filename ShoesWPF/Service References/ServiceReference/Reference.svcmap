@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07a7bd0f-09cd-40da-8a10-b8a7b0635c3a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a82094bf-f917-4d26-93a4-8a0df8d54404" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="net.pipe://shoesstock/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="78c66213-690b-4113-a915-ca919d505488" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1b11726a-3227-4cae-adf5-494d97cb3bca" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="135dba26-7733-473f-9cee-312aaf80999b" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
-    <MetadataFile FileName="ConsoleShoesServer.ShopService.xsd" MetadataType="Schema" ID="85b61dd6-4253-4c98-b981-e0d93050e9a2" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f7fbe4a6-9a37-45d5-bd18-1ba8ffefcde3" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b32f7625-1dc8-45c3-9782-4bc341ad3a7c" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="356fb685-8a80-4b09-a471-09bf829c90ed" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
+    <MetadataFile FileName="ConsoleShoesServer.ShopDataService.xsd" MetadataType="Schema" ID="04a0c678-26f5-40db-abf4-2c007875de7d" SourceId="1" SourceUrl="net.pipe://shoesstock/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

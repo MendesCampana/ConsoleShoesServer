@@ -66,6 +66,39 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="netPipeLogIn_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256>
+                </sp:Basic256>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict>
+                </sp:Strict>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import namespace="http://tempuri.org/" />
@@ -97,6 +130,12 @@
   <wsdl:message name="IShoesContract_addShoe_OutputMessage">
     <wsdl:part name="parameters" element="tns:addShoeResponse" />
   </wsdl:message>
+  <wsdl:message name="IShoesLoginContract_CheckLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLogin" />
+  </wsdl:message>
+  <wsdl:message name="IShoesLoginContract_CheckLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLoginResponse" />
+  </wsdl:message>
   <wsdl:portType name="IFactoryContract">
     <wsdl:operation name="getFactories">
       <wsdl:input wsaw:Action="http://tempuri.org/IFactoryContract/getFactories" message="tns:IFactoryContract_getFactories_InputMessage" />
@@ -115,6 +154,12 @@
     <wsdl:operation name="addShoe">
       <wsdl:input wsaw:Action="http://tempuri.org/IShoesContract/addShoe" message="tns:IShoesContract_addShoe_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IShoesContract/addShoeResponse" message="tns:IShoesContract_addShoe_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IShoesLoginContract">
+    <wsdl:operation name="CheckLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IShoesLoginContract/CheckLogin" message="tns:IShoesLoginContract_CheckLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IShoesLoginContract/CheckLoginResponse" message="tns:IShoesLoginContract_CheckLogin_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="netPipeFactory" type="tns:IFactoryContract">
@@ -163,13 +208,27 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="netPipeLogIn" type="tns:IShoesLoginContract">
+    <wsp:PolicyReference URI="#netPipeLogIn_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="CheckLogin">
+      <soap12:operation soapAction="http://tempuri.org/IShoesLoginContract/CheckLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:service name="ShoesShopContract">
     <wsdl:port name="netPipeFactory" binding="tns:netPipeFactory">
       <soap12:address location="net.pipe://shoesstock/" />
       <wsa10:EndpointReference>
         <wsa10:Address>net.pipe://shoesstock/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>DESKTOP-S1J7RL9\Mikhail</Upn>
+          <Upn>student@lan.itstep.kiev.ua</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
@@ -178,7 +237,16 @@
       <wsa10:EndpointReference>
         <wsa10:Address>net.pipe://shoesstock/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>DESKTOP-S1J7RL9\Mikhail</Upn>
+          <Upn>student@lan.itstep.kiev.ua</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="netPipeLogIn" binding="tns:netPipeLogIn">
+      <soap12:address location="net.pipe://shoesstock/" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://shoesstock/</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>student@lan.itstep.kiev.ua</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>
