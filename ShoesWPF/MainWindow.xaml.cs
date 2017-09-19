@@ -17,17 +17,15 @@ namespace ShoesWPF
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
-        ShoesLoginContractClient client = new ShoesLoginContractClient();
+    {      
         public MainWindow()
         {
-            InitializeComponent();
-            //Factories.ItemsSource = client.getAllShoes();
+            InitializeComponent();           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (client.CheckLogin(loginText.Text, passText.Password))
+        {       
+            if (ClientConnection.Client.CheckLogin(loginText.Text, passText.Password))
             {
                 MessageBox.Show("succeded");
             }
