@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShoesWPF.View"
         mc:Ignorable="d"
-        Title="ShoesList
-        " Height="300" Width="300">
-    <Grid>
-        
+        Title="ShoesList" Height="700" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#4B0082">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="ShoesGrid" FontSize="18" FontWeight="ExtraBold" Margin="20" Grid.Column="0"></DataGrid>
     </Grid>
 </Window>

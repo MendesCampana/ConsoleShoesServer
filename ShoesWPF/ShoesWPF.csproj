@@ -63,6 +63,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ShoesDataBaseConnection.cs" />
     <Compile Include="View\ShoesList.xaml.cs">
       <DependentUpon>ShoesList.xaml</DependentUpon>
     </Compile>

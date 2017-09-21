@@ -1,4 +1,5 @@
 ﻿using ShoesWPF.ServiceReference;
+using ShoesWPF.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,21 +19,27 @@ namespace ShoesWPF
     /// </summary>
     public partial class MainWindow : Window
     {      
+        private Window1 _goodsWindow = new Window1();
         public MainWindow()
         {
             InitializeComponent();           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {       
-            if (ClientConnection.Client.CheckLogin(loginText.Text, passText.Password))
-            {
-                MessageBox.Show("succeded");
-            }
-            else
-            {
-                MessageBox.Show("Denied");
-            }
+        {
+            this.Hide();
+            _goodsWindow.ShowDialog();
+            this.Show();
+            //if (ClientConnection.Client.CheckLogin(loginText.Text, passText.Password))
+            //{
+            //    this.Hide();
+            //    _goodsWindow.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Denied");
+            //}
         }
     }
 }

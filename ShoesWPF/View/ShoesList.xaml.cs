@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesWPF.ServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,10 @@ namespace ShoesWPF.View
     {
         public Window1()
         {
-            InitializeComponent();
+            InitializeComponent();      
+  
+         
+            ShoesGrid.ItemsSource = ShoesDataBaseConnection.Shoes.getAllShoes();
         }
     }
 }
