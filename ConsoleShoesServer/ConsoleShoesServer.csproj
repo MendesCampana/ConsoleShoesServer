@@ -56,8 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IFactoryContract.cs" />
+    <Compile Include="Contracts\IAgeStatus.cs" />
     <Compile Include="Contracts\IShoesContract.cs" />
+    <Compile Include="Contracts\IShoesGender.cs" />
     <Compile Include="Contracts\IShoesLoginContract.cs" />
+    <Compile Include="Contracts\IShoesSize.cs" />
     <Compile Include="ShoesDBfolder\AgeStatu.cs" />
     <Compile Include="ShoesDBfolder\Factory.cs" />
     <Compile Include="ShoesDBfolder\Gender.cs" />

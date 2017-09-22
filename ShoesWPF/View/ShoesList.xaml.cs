@@ -1,4 +1,5 @@
 ﻿using ShoesWPF.ServiceReference;
+using ShoesWPF.ServiceReferenceHome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,29 @@ namespace ShoesWPF.View
     /// Interaction logic for Window1.xaml
     /// </summary>
     public partial class Window1 : Window
-    {
+    {       
         public Window1()
         {
-            InitializeComponent();      
-  
-         
+            InitializeComponent();               
+           
             ShoesGrid.ItemsSource = ShoesDataBaseConnection.Shoes.getAllShoes();
+            FactoriesFilter.ItemsSource = ShoesDataBaseConnection.Factory.getFactories();
+            SizeFilter.ItemsSource = ShoesDataBaseConnection.Sizes.GetSizes();
+            AgeFilter.ItemsSource = ShoesDataBaseConnection.AgeStatus.GetGetAgeStatus();
+            GenderFilter.ItemsSource = ShoesDataBaseConnection.GenderStatus.GetGender();
+        }
+
+        private void ResetFiltersButton_Click(object sender, RoutedEventArgs e)
+        {
+            FactoriesFilter.ItemsSource = ShoesDataBaseConnection.Factory.getFactories();
+            SizeFilter.ItemsSource = ShoesDataBaseConnection.Sizes.GetSizes();
+            AgeFilter.ItemsSource = ShoesDataBaseConnection.AgeStatus.GetGetAgeStatus();
+            GenderFilter.ItemsSource = ShoesDataBaseConnection.GenderStatus.GetGender();
+        }
+
+        private void SizeFilter_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+         
         }
     }
 }

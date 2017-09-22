@@ -58,6 +58,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClientConnection.cs" />
+    <Compile Include="Service References\ServiceReferenceHome\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +112,31 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Service References\ServiceReferenceHome\ConsoleShoesServer.ShopDataService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\service.wsdl" />
+    <None Include="Service References\ServiceReferenceHome\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\ShoesWPF.ServiceReferenceHome.AgeStatusDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\ShoesWPF.ServiceReferenceHome.FactoryDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\ShoesWPF.ServiceReferenceHome.GenderDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\ShoesWPF.ServiceReferenceHome.ShoesDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceHome\ShoesWPF.ServiceReferenceHome.SizeDataService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference\ConsoleShoesServer.ShopDataService.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -131,6 +161,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReferenceHome\" />
     <WCFMetadataStorage Include="Service References\ServiceReference\" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +172,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceHome\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceHome\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceHome\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

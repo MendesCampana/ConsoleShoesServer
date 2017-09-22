@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleShoesServer
 {
-    public class ShoesShopContract:IFactoryContract, IShoesContract, IShoesLoginContract
+    public class ShoesShopContract:IFactoryContract, IShoesContract, IShoesLoginContract,IAgeStatus, IShoesGender, IShoesSize
     {
         ShoesDB context = new ShoesDB();
 
@@ -71,5 +71,43 @@ namespace ConsoleShoesServer
             }
             return false;
         }
+
+        public List<SizeDataService> GetSizes()
+        {
+            List<SizeDataService> tList = new List<SizeDataService>();
+            foreach (Size item in context.Sizes)
+            {
+                tList.Add(new SizeDataService()
+                {
+                    Measure = item.Measure
+                });
+            }
+            return tList;
+        }
+
+        public List<AgeStatusDataService> GetGetAgeStatus()
+        {
+            List<AgeStatusDataService> tList = new List<AgeStatusDataService>();
+            foreach (AgeStatu item in context.AgeStatus)
+            {
+                tList.Add(new AgeStatusDataService()
+                {
+                    Name = item.StatusData
+                });
+            }
+            return tList;
+        }
+        public List<GenderDataService> GetGender()
+        {
+            List<GenderDataService> tList = new List<GenderDataService>();
+            foreach (Gender item in context.Genders)
+            {
+                tList.Add(new GenderDataService()
+                {
+                    Name = item.GenderData
+                });
+            }
+            return tList;
+        }      
     }
 }

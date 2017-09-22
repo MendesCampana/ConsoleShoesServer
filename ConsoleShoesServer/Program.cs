@@ -11,6 +11,9 @@ namespace ConsoleShoesServer
     {
         static void Main(string[] args)
         {
+            //ShoesShopContract tContract = new ShoesShopContract();
+            
+            //Console.ReadLine();
             ServiceHost host = new ServiceHost(typeof(ShoesShopContract));
             host.Open();
             Console.WriteLine("...Host open...");

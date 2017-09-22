@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" />
+  <xs:element name="getFactories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFactoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="getFactoriesResult" nillable="true" type="q1:ArrayOfFactoryDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addFactory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="tFactory" nillable="true" type="q2:FactoryDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addFactoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllShoes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllShoesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="getAllShoesResult" nillable="true" type="q3:ArrayOfShoesDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addShoe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="tShoe" nillable="true" type="q4:ShoesDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addShoeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogIn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PassWord" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckLoginResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGender">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="GetGenderResult" nillable="true" type="q5:ArrayOfGenderDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSizes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSizesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="GetSizesResult" nillable="true" type="q6:ArrayOfSizeDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGetAgeStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGetAgeStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ConsoleShoesServer.ShopDataService" minOccurs="0" name="GetGetAgeStatusResult" nillable="true" type="q7:ArrayOfAgeStatusDataService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
